@@ -1,3 +1,7 @@
 {
-    "age": { "type": "integer", "minimum": 0, "description": "Age in years" }
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "age",
+    "type": "integer",
+    "minimum": 0,
+    "description": "Age in years"
 }

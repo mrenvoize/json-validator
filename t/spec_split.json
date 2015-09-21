@@ -5,9 +5,6 @@
   "properties": {
       "firstName": { "type": "string" },
       "lastName": { "type": "string" },
-      "age": { "$ref": "#/definitions/age" }
-  },
-  "definitions": {
-      "$ref": "./definitions/spec_split-definitions.json"
+      "age": { "$ref": "./definitions/spec_split-definitions.json#age" }
   }
 }
