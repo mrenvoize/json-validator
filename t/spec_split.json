@@ -1,0 +1,11 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "required": ["firstName", "lastName", "age", "height"],
+  "properties": {
+      "firstName": { "type": "string" },
+      "lastName": { "type": "string" },
+      "age": { "$ref": "./definitions/spec_split-definitions.json#age" },
+      "height": { "$ref": "./definitions/spec_split2-definitions.json#height" }
+  }
+}

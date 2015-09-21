@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "height",
+    "type": "object",
+    "properties": {
+        "measurement": { "type": "integer" },
+        "unit": { "$ref": "./definitions/unit.json" }
+    },
+    "description": "Height with units"
+}
