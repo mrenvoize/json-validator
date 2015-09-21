@@ -1,0 +1,7 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "id": "unit",
+    "type": "string",
+    "pattern": "^mm|cm|m$",
+    "description": "Units of length"
+}
