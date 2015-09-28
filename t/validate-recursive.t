@@ -14,14 +14,23 @@ use JSON::Validator 'validate_json';
 
 my $t = Test::Mojo->new;
 
-$t->post_ok( '/', json => {} )->status_is(400)->content_like(qr{/name});
-$t->post_ok( '/', json => { name => "foo" } )->status_is(200);
+$t->post_ok( '/', json => {} )->status_is(400)->content_like(qr{/person});
+$t->post_ok( '/', json => { person => { name => "foo" } } )->status_is(200);
+$t->post_ok( '/', json => { person => { name => "foo", children => [ {} ] } } )->status_is(400)->content_like(qr{/person});
 
 done_testing;
 __DATA__
 @@ spec.json
 {
-  "$ref": "#/definitions/person",
+  "type": "object",
+  "properties": {
+    "person": {
+      "$ref": "#/definitions/person"
+    }
+  },
+  "required": [
+    "person"
+  ],
   "definitions": {
     "person": {
       "type": "object",
