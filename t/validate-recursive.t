@@ -16,7 +16,8 @@ my $t = Test::Mojo->new;
 
 $t->post_ok( '/', json => {} )->status_is(400)->content_like(qr{/person});
 $t->post_ok( '/', json => { person => { name => "foo" } } )->status_is(200);
-$t->post_ok( '/', json => { person => { name => "foo", children => [ {} ] } } )->status_is(400)->content_like(qr{/person});
+$t->post_ok( '/', json => { person => { name => "foo", children => [ {} ] } } )
+  ->status_is(400)->content_like(qr{/person});
 
 done_testing;
 __DATA__
